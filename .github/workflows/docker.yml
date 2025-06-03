@@ -22,6 +22,7 @@ jobs:
 
     - name: Run container (test)
       run: |
-        mkdir log_output
+        mkdir -p log_output
         docker run -v ${{ github.workspace }}/log_output:/log_output log-monitor
         ls log_output
+
